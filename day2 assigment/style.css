@@ -53,59 +53,125 @@ h2 {
     margin-left: 560px;
     text-align: center;
 }
-
 .hero-section {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/02/Computer_science_education.png');
-    background-color: rgb(38, 37, 37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
     background-size: cover;
     background-position: center;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border-radius: 0px;
+    
 }
 
-.hero-overlay {
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slideshow {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: slideShow 15s infinite;
+}
+
+.hero-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 100%;
+    color: white;
     text-align: center;
+    z-index: 1;
+    position: relative;
+    
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-top: 5px;
     color: white;
 }
 
-.hero-overlay h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.hero-overlay p {
-    font-size: 1.5rem;
+.hero-content p {
+    font-size: 1.2em;
     margin-bottom: 30px;
 }
 
-.cta-button {
-    background-color: blue;
-    color: white;
+.hero-content .btn {
+    display: inline;
     padding: 15px 30px;
-    border: none;
+    background-color: #007BFF;
+    color: white;
     text-decoration: none;
-    font-size: 1.2rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-    background-color: rgb(10, 10, 134);
+.hero-content .btn:hover {
+    background-color: #0056b3;
+}
+.slideshow .hero-content:nth-child(1) {
+    background-image: url('https://png.pngtree.com/background/20230528/original/pngtree-this-image-shows-an-ornate-college-building-in-autumn-picture-image_2780865.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #313131;
+    
 }
 
+.slideshow .hero-content:nth-child(2) {
+    background-image: url('https://img.lovepik.com/photo/20211124/large/lovepik-university-of-cambridge-in-the-setting-sun-picture_500950359.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #313131;
+}
+
+.slideshow .hero-content:nth-child(3) {
+    background-image: url('https://images.unsplash.com/photo-1603857365671-93cd96dc1df8?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-color: #313131;
+}
+
+
+@keyframes slideShow {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    60% {
+        transform: translateX(-200%);
+    }
+    80% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/* Additional sections and styling */
 section {
     background-color: white;
     padding: 20px;
@@ -142,6 +208,7 @@ ul li {
     color: #1a41d6;
 }
 
+/* Other section and footer styles as per your code */
 .hex-container {
     display: flex;
     justify-content: center;
